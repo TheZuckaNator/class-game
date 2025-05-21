@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#game-canvas {
+    background-image: url('../assets/bg-fun.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+#selection-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#selection-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#jetpack-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 350px;
+}
+
+.jetpack-option {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jetpack-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.jetpack-option img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#game-over h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#final-score {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}
+
+#score-display {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 24px;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#high-score-display {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#high-score-text {
+    color: gold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}

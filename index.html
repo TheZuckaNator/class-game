@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetpack Flappy Bird</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="score-display">Score: 0</div>
+        <div id="high-score-display">High Score: 0</div>
+        
+        <div id="selection-screen">
+            <div id="selection-title">Choose Your Jetpack</div>
+            <div id="jetpack-options">
+                <!-- Jetpack options will be added here dynamically -->
+            </div>
+        </div>
+        
+        <div id="game-over">
+            <h2>Game Over!</h2>
+            <div id="final-score">Score: 0</div>
+            <div id="high-score-text">High Score: 0</div>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
+    
+    <!-- Audio elements for game sounds with autoplay and preload -->
+    <audio id="jump-sound" src="./assets/jump.mp3" preload="auto"></audio>
+    <audio id="score-sound" src="./assets/score.mp3" preload="auto"></audio>
+    <audio id="game-over-sound" src="./assets/game-over.mp3" preload="auto"></audio>
+    
+    <!-- Fallback button to enable audio -->
+    <button id="enable-audio" style="position: absolute; bottom: 10px; left: 10px; z-index: 1000;">Enable Sounds</button>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
